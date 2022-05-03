@@ -9,6 +9,17 @@
             "mainClass": "br.com.axolot.animal.AnimalApplication",
             "projectName": "animal",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DinoApplication<dino>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.com.axolot.animal.DinoApplication",
+            "projectName": "dino",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
