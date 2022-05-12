@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.axolot.animal.Dtos.DinoDto;
 import br.com.axolot.animal.Service.DinoService;
 import br.com.axolot.animal.model.Animal;
-import br.com.axolot.animal.model.Dinosaur;
+import br.com.axolot.animal.model.Dinossauro;
 
 @RestController
 @RequestMapping("/dino")
@@ -19,9 +19,8 @@ public class DinoController {
 
     @GetMapping("/test")
     public String imageDino( DinoDto dto) {
-        Animal animal = new Dinosaur();
+        Animal animal = new Dinossauro();
         animal.setLife(dto.getLife());
-
         return animal.toString();
     }
     
