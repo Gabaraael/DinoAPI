@@ -1,10 +1,2 @@
 
-animal/target/classes/br/com/axolot/animal/DinoApplication.class
-animal/target/classes/br/com/axolot/animal/SpringFoxConfig.class
-animal/target/classes/br/com/axolot/animal/Controller/DinoController.class
-animal/target/classes/br/com/axolot/animal/Dtos/DinoDto.class
-animal/target/classes/br/com/axolot/animal/model/Animal.class
-animal/target/classes/br/com/axolot/animal/model/Dinossauro.class
-animal/target/classes/br/com/axolot/animal/model/User.class
-animal/target/classes/br/com/axolot/animal/repository/DinoRepository.class
-animal/target/classes/br/com/axolot/animal/Service/DinoService.class
+animal/target/*
