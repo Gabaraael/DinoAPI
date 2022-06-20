@@ -4,4 +4,5 @@ br\com\axolot\animal\model\Animal.class
 br\com\axolot\animal\Controller\DinoController.class
 br\com\axolot\animal\Service\DinoService.class
 br\com\axolot\animal\model\Dinosaur.class
+br\com\axolot\animal\repository\DinoRepository.class
 br\com\axolot\animal\model\User.class

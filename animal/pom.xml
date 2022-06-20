@@ -78,6 +78,13 @@
       <artifactId>springdoc-openapi-ui</artifactId>
       <version>1.6.8</version>
    </dependency>
+	
+	<!-- Mapper to convert DTO in Pojo or Pojo in DTO -->
+   <dependency>
+    <groupId>org.modelmapper</groupId>
+    <artifactId>modelmapper</artifactId>
+    <version>2.4.5</version>
+</dependency>
 	</dependencies>
 	<build>
 		<plugins>

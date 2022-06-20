@@ -1,6 +1,6 @@
 package br.com.axolot.animal.Controller;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,19 +13,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.axolot.animal.Dtos.DinoDto;
 import br.com.axolot.animal.Service.DinoService;
-import br.com.axolot.animal.model.Dinosaur;
 
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping(path = "/api")
 public class DinoController{
 
     @Autowired
     DinoService dinoService;
 
-    @GetMapping("/dinos")
-    public ArrayList<Dinosaur> findAll() {
+    @GetMapping(path = "/dinos")
+    public List<DinoDto> findAll() {
 
         return dinoService.findAll();   
 

@@ -1,7 +1,9 @@
 package br.com.axolot.animal.Service;
 
-import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,20 +17,22 @@ public class DinoService {
     @Autowired
     DinoRepository dinoRepository;
 
-    public ArrayList<Dinosaur> findAll() {
+    public List<DinoDto> findAll() {
+        ModelMapper modelMapper = new ModelMapper();
 
-        return dinoRepository.findAll();
+        List<DinoDto> dinoDtos = dinoRepository.findAll()
+                .stream()
+                .map(dino -> modelMapper.map(dino, DinoDto.class))
+                .collect(Collectors.toList());
+        return dinoDtos;
 
     }
 
     public void create(DinoDto dinoDto) {
-        Dinosaur dino = new Dinosaur();
+        ModelMapper modelMapper = new ModelMapper();
+        Dinosaur dino = modelMapper.map(dinoDto, Dinosaur.class);
 
         try {
-
-            dino.setAttack(dinoDto.getAttack());
-            dino.setLife(dinoDto.getLife());
-            dino.setName(dinoDto.getName());
             dinoRepository.save(dino);
 
         } catch (Exception e) {
