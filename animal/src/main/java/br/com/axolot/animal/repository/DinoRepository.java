@@ -8,8 +8,10 @@ import org.springframework.stereotype.Repository;
 import br.com.axolot.animal.model.Dinosaur;
 
 @Repository
-public interface DinoRepository extends JpaRepository<Dinosaur, Long>{
+public interface DinoRepository extends JpaRepository<Dinosaur, Long> {
 
     public ArrayList<Dinosaur> findAll();
-    
+
+    public Dinosaur findById();
+
 }

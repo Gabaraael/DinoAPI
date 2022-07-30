@@ -1,6 +1,7 @@
 package br.com.axolot.animal.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -39,7 +40,21 @@ public class DinoService {
             throw e;
 
         }
+    }
 
+    public void findById(long id) {
+
+        ModelMapper modelMapper = new ModelMapper();
+        try {
+
+            Dinosaur dinosaur = dinoRepository.findById(id);
+            // Dinosaur dinosaur = dinoRepository.findById(id);
+            modelMapper.map(dinoDto, Dinosaur.class);
+
+        } catch (Exception e) {
+            throw e;
+
+        }
     }
 
 }

@@ -10,10 +10,10 @@ public class DinoApplication extends SpringBootServletInitializer{
 
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		SpringApplication.run(DinoApplication.class, args);
 		
-	}
+	} 
 
 	  @Override
     protected SpringApplicationBuilder configure (SpringApplicationBuilder builder) {
