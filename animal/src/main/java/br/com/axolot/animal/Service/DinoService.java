@@ -1,14 +1,13 @@
 package br.com.axolot.animal.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.axolot.animal.Dtos.DinoDto;
+import br.com.axolot.animal.dtos.DinoDto;
 import br.com.axolot.animal.model.Dinosaur;
 import br.com.axolot.animal.repository.DinoRepository;
 
@@ -47,9 +46,9 @@ public class DinoService {
         ModelMapper modelMapper = new ModelMapper();
         try {
 
-            Dinosaur dinosaur = dinoRepository.findById(id);
+//            Dinosaur dinosaur = dinoRepository.findById(id);
             // Dinosaur dinosaur = dinoRepository.findById(id);
-            modelMapper.map(dinoDto, Dinosaur.class);
+//            modelMapper.map(dinoDto, Dinosaur.class);
 
         } catch (Exception e) {
             throw e;

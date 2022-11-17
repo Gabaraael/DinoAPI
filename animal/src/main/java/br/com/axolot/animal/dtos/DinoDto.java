@@ -1,4 +1,4 @@
-package br.com.axolot.animal.Dtos;
+package br.com.axolot.animal.dtos;
 
 import lombok.Data;
 

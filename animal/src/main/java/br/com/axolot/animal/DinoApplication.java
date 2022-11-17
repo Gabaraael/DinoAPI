@@ -20,5 +20,4 @@ public class DinoApplication extends SpringBootServletInitializer{
         return builder.sources(DinoApplication.class);
 		
     }
-
 }

@@ -1,30 +1,26 @@
 package br.com.axolot.animal.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+@Data
 public class Dinosaur{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Getter
-    @Setter
+    @JoinColumn(name = "DES_NAME")
     private String name;
 
-    @Getter
-    @Setter
+
+    @JoinColumn(name = "DES_LIFE")
     private Integer life;
 
-    @Getter
-    @Setter
+    @JoinColumn(name = "DES_ATTACK")
     private Integer attack;
     
 }
