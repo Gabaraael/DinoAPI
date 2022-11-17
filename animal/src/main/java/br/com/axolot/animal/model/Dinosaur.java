@@ -1,26 +1,53 @@
 package br.com.axolot.animal.model;
 
-import javax.persistence.*;
-
+import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
 
 @Entity
 @Data
-public class Dinosaur{
+@Builder
+@Table(name = "DINOSAUR")
+public class Dinosaur {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @JoinColumn(name = "DINOSAUR_ID")
     private Long id;
 
-    @JoinColumn(name = "DES_NAME")
+    @JoinColumn(name = "NAME")
     private String name;
 
+    @JoinColumn(name = "SUPERORDER")
+    private String superOrder;
 
-    @JoinColumn(name = "DES_LIFE")
-    private Integer life;
+    @JoinColumn(name = "ORDER")
+    private String order;
 
-    @JoinColumn(name = "DES_ATTACK")
-    private Integer attack;
+    @JoinColumn(name = "SUBORDER")
+    private String subOrder;
+
+    @JoinColumn(name = "INFRAORDER")
+    private String infraOrder;
+
+    @JoinColumn(name = "PAVORDER")
+    private String pavOrder;
+
+    @JoinColumn(name = "FAMILY")
+    private String family;
+
+    @JoinColumn(name = "SPECIE")
+    private String specie;
+
+    @JoinColumn(name = "GEOLOGICTIMESCALE")
+    private String geologicTimeScale;
     
 }
