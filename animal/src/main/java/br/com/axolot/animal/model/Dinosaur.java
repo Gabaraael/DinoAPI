@@ -16,6 +16,7 @@ public class Dinosaur{
     @JoinColumn(name = "DES_NAME")
     private String name;
 
+
     @JoinColumn(name = "DES_LIFE")
     private Integer life;
 
