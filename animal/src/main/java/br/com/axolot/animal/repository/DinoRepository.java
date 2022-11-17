@@ -10,8 +10,8 @@ import br.com.axolot.animal.model.Dinosaur;
 @Repository
 public interface DinoRepository extends JpaRepository<Dinosaur, Long> {
 
+    @Override
     public ArrayList<Dinosaur> findAll();
 
-    public Dinosaur findById();
 
 }
