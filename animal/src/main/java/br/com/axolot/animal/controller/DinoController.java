@@ -1,7 +1,7 @@
 package br.com.axolot.animal.controller;
 
-import java.util.List;
-
+import br.com.axolot.animal.Service.DinoService;
+import br.com.axolot.animal.dtos.DinoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.axolot.animal.dtos.DinoDto;
-import br.com.axolot.animal.Service.DinoService;
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api")
@@ -51,20 +50,4 @@ public class DinoController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
-
-    // @GetMapping(path = "/dinosaurus/{id}")
-    // public ResponseEntity<?> deleteDinosaur(@PathVariable Long id) {
-
-    // try {
-    // // TODO
-    // //
-    // https://medium.com/linkit-intecs/rest-resource-naming-best-practices-cbee65f37a62
-    // // dinoService..(id);
-    // return ResponseEntity.ok().body(true);
-    // } catch (Exception e) {
-    // return
-    // ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
-    // }
-    // }
-
 }

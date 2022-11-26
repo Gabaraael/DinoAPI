@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.axolot.animal.dtos.DinoDto;
-import br.com.axolot.animal.model.Dinosaur;
+import br.com.axolot.animal.model.DinosaurEntity;
 import br.com.axolot.animal.repository.DinoRepository;
 
 @Service
@@ -30,7 +30,7 @@ public class DinoService {
 
     public void create(DinoDto dinoDto) {
         ModelMapper modelMapper = new ModelMapper();
-        Dinosaur dino = modelMapper.map(dinoDto, Dinosaur.class);
+        DinosaurEntity dino = modelMapper.map(dinoDto, DinosaurEntity.class);
 
         try {
             dinoRepository.save(dino);

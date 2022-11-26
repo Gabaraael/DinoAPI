@@ -3,51 +3,49 @@ package br.com.axolot.animal.model;
 import lombok.Builder;
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Data
 @Builder
 @Table(name = "DINOSAUR")
-public class Dinosaur {
+public class DinosaurEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @JoinColumn(name = "DINOSAUR_ID")
+    @Column(name = "DINOSAUR_ID")
     private Long id;
 
-    @JoinColumn(name = "NAME")
+    @Column(name = "NAME")
     private String name;
 
-    @JoinColumn(name = "SUPERORDER")
+    @Column(name = "SUPERORDER")
     private String superOrder;
 
-    @JoinColumn(name = "ORDER")
+    @Column(name = "ORDER")
     private String order;
 
-    @JoinColumn(name = "SUBORDER")
+    @Column(name = "SUBORDER")
     private String subOrder;
 
-    @JoinColumn(name = "INFRAORDER")
+    @Column(name = "INFRAORDER")
     private String infraOrder;
 
-    @JoinColumn(name = "PAVORDER")
+    @Column(name = "PAVORDER")
     private String pavOrder;
 
-    @JoinColumn(name = "FAMILY")
+    @Column(name = "FAMILY")
     private String family;
 
-    @JoinColumn(name = "SPECIE")
+    @Column(name = "SPECIE")
     private String specie;
 
-    @JoinColumn(name = "GEOLOGICTIMESCALE")
+    @Column(name = "GEOLOGICTIMESCALE")
     private String geologicTimeScale;
     
 }
