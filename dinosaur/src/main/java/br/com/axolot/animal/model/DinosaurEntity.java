@@ -17,8 +17,8 @@ import javax.persistence.Table;
 public class DinosaurEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "DINOSAUR_ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "NAME")
@@ -27,8 +27,9 @@ public class DinosaurEntity {
     @Column(name = "SUPERORDER")
     private String superOrder;
 
-    @Column(name = "ORDER")
-    private String order;
+    // ORDEM É UMA PALAVRA RESERVADA, BICHOS
+//    @Column(name = "ORDER")
+//    private String order;
 
     @Column(name = "SUBORDER")
     private String subOrder;
