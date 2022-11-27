@@ -24,5 +24,4 @@ public class UserEntity {
     @Column(name = "PASSWORD")
     private String password;
     
-    
 }

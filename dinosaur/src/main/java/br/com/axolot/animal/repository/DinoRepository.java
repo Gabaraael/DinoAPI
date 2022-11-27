@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import br.com.axolot.animal.model.DinosaurEntity;
+import br.com.axolot.animal.model.AnimaliaEntity;
 
 @Repository
-public interface DinoRepository extends JpaRepository<DinosaurEntity, Long> {
+public interface DinoRepository extends JpaRepository<AnimaliaEntity, Long> {
 
     @Override
-    public ArrayList<DinosaurEntity> findAll();
+    public ArrayList<AnimaliaEntity> findAll();
 
 
 }

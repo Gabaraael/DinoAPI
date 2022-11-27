@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @Data
 @Builder
 @Table(name = "ANIMALIA")
-public class DinosaurEntity {
+public class AnimaliaEntity {
 
     @Id
     @Column(name = "ANIMALIA_ID")
