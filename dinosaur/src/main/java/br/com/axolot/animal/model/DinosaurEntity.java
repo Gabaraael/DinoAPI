@@ -13,40 +13,24 @@ import javax.persistence.Table;
 @Entity
 @Data
 @Builder
-@Table(name = "DINOSAUR")
+@Table(name = "ANIMALIA")
 public class DinosaurEntity {
 
     @Id
-    @Column(name = "DINOSAUR_ID")
+    @Column(name = "ANIMALIA_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @Column(name = "NAME")
-    private String name;
-
-    @Column(name = "SUPERORDER")
-    private String superOrder;
-
-    // ORDEM É UMA PALAVRA RESERVADA, BICHOS
-//    @Column(name = "ORDER")
-//    private String order;
-
-    @Column(name = "SUBORDER")
-    private String subOrder;
-
-    @Column(name = "INFRAORDER")
-    private String infraOrder;
-
-    @Column(name = "PAVORDER")
-    private String pavOrder;
 
     @Column(name = "FAMILY")
     private String family;
 
-    @Column(name = "SPECIE")
-    private String specie;
+    @Column(name = "GENUS")
+    private String genus;
 
-    @Column(name = "GEOLOGICTIMESCALE")
-    private String geologicTimeScale;
+    @Column(name = "INITIAL_GEOLOGIC_TIME")
+    private String initialGeologicTime;
+
+    @Column(name = "FINAL_GEOLOGIC_TIME")
+    private String finalGeologicTime;
     
 }
