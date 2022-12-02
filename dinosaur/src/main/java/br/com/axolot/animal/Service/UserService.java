@@ -3,6 +3,7 @@ package br.com.axolot.animal.Service;
 import br.com.axolot.animal.dtos.UserRegister;
 import br.com.axolot.animal.model.UserEntity;
 import br.com.axolot.animal.repository.UserRepository;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,8 +13,11 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
+    private final PasswordEncoder passwordEncoder;
+
+    public UserService(UserRepository userRepository, PasswordEncoder encoder, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public void register(UserRegister userRegister) {
@@ -23,7 +27,7 @@ public class UserService {
     public UserEntity buildUser(UserRegister userRegister) {
         return UserEntity.builder()
                 .username(userRegister.getUsername())
-                .password(userRegister.getPassword())
+                .password(passwordEncoder.encode(userRegister.getPassword()))
                 .build();
     }
 

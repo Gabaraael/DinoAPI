@@ -20,7 +20,7 @@ public class UserController {
 
     @PostMapping(path = "/register")
     public ResponseEntity<?> registerUser( UserRegister userRegister) {
-        userService.buildUser(userRegister);
+        userService.register(userRegister);
         return ResponseEntity.ok().body(true);
     }
 }
